@@ -14,7 +14,264 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      exercises: {
+        Row: {
+          category: string
+          created_at: string
+          id: string
+          image_url: string | null
+          instructions: string | null
+          muscle_group: string
+          name: string
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          instructions?: string | null
+          muscle_group: string
+          name: string
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          id?: string
+          image_url?: string | null
+          instructions?: string | null
+          muscle_group?: string
+          name?: string
+        }
+        Relationships: []
+      }
+      payments: {
+        Row: {
+          amount: number
+          created_at: string
+          due_date: string
+          id: string
+          notes: string | null
+          paid_date: string | null
+          payment_method: string | null
+          status: string
+          student_id: string
+        }
+        Insert: {
+          amount: number
+          created_at?: string
+          due_date: string
+          id?: string
+          notes?: string | null
+          paid_date?: string | null
+          payment_method?: string | null
+          status?: string
+          student_id: string
+        }
+        Update: {
+          amount?: number
+          created_at?: string
+          due_date?: string
+          id?: string
+          notes?: string | null
+          paid_date?: string | null
+          payment_method?: string | null
+          status?: string
+          student_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          email: string
+          id: string
+          name: string
+          phone: string | null
+          specialty: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          email: string
+          id?: string
+          name: string
+          phone?: string | null
+          specialty?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          email?: string
+          id?: string
+          name?: string
+          phone?: string | null
+          specialty?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      students: {
+        Row: {
+          birth_date: string | null
+          created_at: string
+          email: string
+          goals: string | null
+          id: string
+          monthly_fee: number | null
+          name: string
+          payment_due_date: string | null
+          payment_status: string
+          phone: string | null
+          restrictions: string | null
+          status: string
+          trainer_id: string
+          updated_at: string
+        }
+        Insert: {
+          birth_date?: string | null
+          created_at?: string
+          email: string
+          goals?: string | null
+          id?: string
+          monthly_fee?: number | null
+          name: string
+          payment_due_date?: string | null
+          payment_status?: string
+          phone?: string | null
+          restrictions?: string | null
+          status?: string
+          trainer_id: string
+          updated_at?: string
+        }
+        Update: {
+          birth_date?: string | null
+          created_at?: string
+          email?: string
+          goals?: string | null
+          id?: string
+          monthly_fee?: number | null
+          name?: string
+          payment_due_date?: string | null
+          payment_status?: string
+          phone?: string | null
+          restrictions?: string | null
+          status?: string
+          trainer_id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      workout_exercises: {
+        Row: {
+          created_at: string
+          exercise_id: string
+          id: string
+          notes: string | null
+          order_index: number
+          reps: string
+          rest_time: number | null
+          sets: number
+          weight: number | null
+          workout_id: string
+        }
+        Insert: {
+          created_at?: string
+          exercise_id: string
+          id?: string
+          notes?: string | null
+          order_index: number
+          reps: string
+          rest_time?: number | null
+          sets: number
+          weight?: number | null
+          workout_id: string
+        }
+        Update: {
+          created_at?: string
+          exercise_id?: string
+          id?: string
+          notes?: string | null
+          order_index?: number
+          reps?: string
+          rest_time?: number | null
+          sets?: number
+          weight?: number | null
+          workout_id?: string
+        }
+        Relationships: []
+      }
+      workout_progress: {
+        Row: {
+          completed_at: string
+          completed_reps: string | null
+          completed_sets: number
+          id: string
+          student_id: string
+          weight_used: number | null
+          workout_exercise_id: string
+          workout_id: string
+        }
+        Insert: {
+          completed_at?: string
+          completed_reps?: string | null
+          completed_sets?: number
+          id?: string
+          student_id: string
+          weight_used?: number | null
+          workout_exercise_id: string
+          workout_id: string
+        }
+        Update: {
+          completed_at?: string
+          completed_reps?: string | null
+          completed_sets?: number
+          id?: string
+          student_id?: string
+          weight_used?: number | null
+          workout_exercise_id?: string
+          workout_id?: string
+        }
+        Relationships: []
+      }
+      workouts: {
+        Row: {
+          created_at: string
+          division: string
+          id: string
+          name: string
+          status: string
+          student_id: string
+          trainer_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          division: string
+          id?: string
+          name: string
+          status?: string
+          student_id: string
+          trainer_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          division?: string
+          id?: string
+          name?: string
+          status?: string
+          student_id?: string
+          trainer_id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

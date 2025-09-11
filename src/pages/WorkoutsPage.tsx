@@ -1,17 +1,16 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Navigation from "@/components/Navigation";
+import WorkoutBuilder from '@/components/WorkoutBuilder';
+import Navigation from '@/components/Navigation';
 
-const Index = () => {
+export default function WorkoutsPage() {
   const { user, loading } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!loading && user) {
-      navigate('/dashboard');
+    if (!loading && !user) {
+      navigate('/auth');
     }
   }, [user, loading, navigate]);
 
@@ -23,13 +22,16 @@ const Index = () => {
     );
   }
 
+  if (!user) {
+    return null;
+  }
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <Hero />
-      <Features />
+      <main className="container mx-auto px-4 py-8">
+        <WorkoutBuilder />
+      </main>
     </div>
   );
-};
-
-export default Index;
+}

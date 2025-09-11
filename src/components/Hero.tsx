@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play, Star, Users, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-fitness.jpg";
 
 export default function Hero() {
@@ -33,10 +34,12 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button className="btn-hero text-lg px-8 py-4">
-                Começar Grátis
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <Link to="/auth">
+                <Button className="btn-hero text-lg px-8 py-4 w-full sm:w-auto">
+                  Começar Grátis
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
               <Button variant="outline" className="text-lg px-8 py-4 border-primary text-primary hover:bg-primary hover:text-white">
                 <Play className="mr-2 h-5 w-5" />
                 Ver Demo
