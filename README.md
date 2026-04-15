@@ -1,73 +1,70 @@
-# Welcome to your Lovable project
+# 🏋️ Trainer Sync — Personal Trainer Management Platform
 
-## Project info
+> **EN** | [🇧🇷 Versão em Português abaixo](#-sobre-o-projeto-português)
 
-**URL**: https://lovable.dev/projects/9c969fbe-f5ad-4c30-b219-7e3cf1749713
+A modern platform designed for personal trainers and fitness coaches to manage clients, workout plans, and track progress — all in one place.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+- 👥 **Client Management** — Register and manage your client roster
+- 💪 **Workout Plans** — Create and assign personalized training programs
+- 📈 **Progress Tracking** — Monitor client evolution over time
+- 📅 **Scheduling** — Manage sessions and appointments
+- 🌙 **Dark/Light Mode** — Theme support for all environments
+- 🔐 **Auth** — Secure login with Supabase Auth
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9c969fbe-f5ad-4c30-b219-7e3cf1749713) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React, TypeScript, Vite |
+| UI | TailwindCSS, Shadcn/UI |
+| Backend | Supabase (PostgreSQL + Auth) |
+| Deploy | Vercel |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Getting Started
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/jeanoliveirafs/trainer-sync-68.git
+cd trainer-sync-68
+npm install
+cp .env.example .env
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Environment Variables
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🇧🇷 Sobre o Projeto (Português)
 
-## What technologies are used for this project?
+**Trainer Sync** é uma plataforma moderna para personal trainers e coaches de fitness gerenciarem clientes, planos de treino e acompanharem o progresso — tudo em um só lugar.
 
-This project is built with:
+### Funcionalidades
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- 👥 **Gestão de Clientes** — Cadastre e gerencie sua base de clientes
+- 💪 **Planos de Treino** — Crie e atribua programas de treinamento personalizados
+- 📈 **Acompanhamento** — Monitore a evolução do cliente ao longo do tempo
+- 📅 **Agendamentos** — Gerencie sessões e consultas
 
-## How can I deploy this project?
+### Como Executar
 
-Simply open [Lovable](https://lovable.dev/projects/9c969fbe-f5ad-4c30-b219-7e3cf1749713) and click on Share -> Publish.
+```bash
+git clone https://github.com/jeanoliveirafs/trainer-sync-68.git
+cd trainer-sync-68 && npm install && npm run dev
+```
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+<p align="center">Made with ❤️ by <a href="https://github.com/jeanoliveirafs">Jean Oliveira</a></p>
